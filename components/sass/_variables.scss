@@ -1,0 +1,54 @@
+// _variables.scss
+// =================
+@import "http://fonts.googleapis.com/css?family=Patua+One|Inika";
+@import "https://fonts.googleapis.com/css?family=Roboto+Slab|Bree+Serif|Merriweather";
+// Blue Pallet
+$weakestBlue    : #7788AA;
+$weakBlue       : #4E638E;
+$darkBlue       : #2D4471;
+$darkestBlue    : #061739;
+
+// Noir Colors
+$black          : #000000;
+$midnightBlue   : #191970;
+$dimGray        : #696969;
+$ebony          : #555D50;
+$taupe          : #483C32;
+$davyGray       : #555555;
+$charcoal       : #414A4C;
+$cafeNoir       : #483621;
+$blackBean      : #3D0C02;
+$blackOlive     : #3B3C36;
+$onyx           : #353839;
+$pthaloGreen    : #123524;
+$jet            : #343434;
+$blackLeather   : #253529;
+$charleston     : #232B2B;
+$eerieBlack     : #1B1B1B;
+$licorice       : #1A1110;
+
+//misc colors
+$offWhite      : #EEE8D6;
+$beige         : #E3C691;
+$darkGreenGold : #8D8862;
+$lightGreen    : #C0DC99;
+$green         : #507356;
+$lightBlue     : #97D5D9;
+$desatBlue     : #464B65;
+$purple        : #3E2B3D;
+$darkPurple    : #3A3248;
+$pink          : #CC8E94;
+$skin          : #B08B7B;
+
+
+$headFont : 'Patua One', sans-serif;
+$bodyFont : 'Inika', serif;
+
+$fontMain            : 'Merryweather', Helvetica, sans-seriff;
+$font-highlight      :  'Bree Serif', Helvetica, sans-serif;
+
+$color-main           : $midnightBlue;
+$background-color    : $beige;
+$color-headlines     : $eerieBlack;
+$color-item-border   : $pthaloGreen;
+$color-media-head    : $cafeNoir;

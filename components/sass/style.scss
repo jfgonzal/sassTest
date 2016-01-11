@@ -1,0 +1,18 @@
+// style.scss
+// ==========
+
+
+//Compass imports
+@import "compass";
+//@import "compass/reset";
+
+
+
+//Core partials
+@import "variables";
+@import "normalize";
+@import "base";
+@import "modules/media";
+
+
+
