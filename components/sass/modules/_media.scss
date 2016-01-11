@@ -4,9 +4,17 @@
   list-style: none;
 
   .item{
-    margin-bottom: 20px;
-    border-top: 1px dotted $color-item-border;
+    padding-bottom: 20px;
     padding-top: 10px;
+    padding-left: 10px;
+    border-top: 1px dotted $color-item-border;
+    &:hover{
+      background: $gold;
+    }
+    &:last-of-type{
+      border-bottom: 1px dotted $color-item-border;
+    }
+    @include clearfix;
   }
 
   .head{
@@ -14,6 +22,11 @@
     padding: 0;
     color: $color-media-head;
     font-size: 2rem;
+    // if this head, is == typography
+    //(typography id and there is a head section above)
+    #typography & {
+      color: red;
+    }
   }
 
   p{

@@ -25,13 +25,13 @@ gulp.task('compass', function(){
             style: 'nested'
         })
             .on('error', gutil.log))
-        .pipe(gulp.dest(outputDir + 'css'))
+        .pipe(gulp.dest('builds/development/css'))
         .pipe(connect.reload())
 });
 
 gulp.task('watch', function(){
     gulp.watch(jsSources, ['js']);
-    gulp.watch('components/sass/*.scss', ['compass']);
+    gulp.watch('components/sass/**/*.scss', ['compass']);
     gulp.watch('builds/development/*.html', ['html']);
 });
 
