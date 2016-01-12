@@ -495,10 +495,30 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 2.5rem;
     text-align: left;
     padding-bottom: 5px; }
+  .table > thead > tr:hover,
+  .table > tbody > tr:hover,
+  .table > tfoot > tr:hover {
+    background-color: #dfc5b2; }
+  .table > thead > tr:nth-child(even),
+  .table > tbody > tr:nth-child(even),
+  .table > tfoot > tr:nth-child(even) {
+    background-color: rgba(255, 215, 0, 0.2); }
+    .table > thead > tr:nth-child(even):hover,
+    .table > tbody > tr:nth-child(even):hover,
+    .table > tfoot > tr:nth-child(even):hover {
+      background-color: rgba(255, 215, 0, 0.5); }
   .table > thead > tr > th,
   .table > thead > tr > td,
   .table > tbody > tr > th,
   .table > tbody > tr > td,
   .table > tfoot > tr > th,
   .table > tfoot > tr > td {
-    padding: 10px; }
+    padding: 10px;
+    border-bottom: 1px dotted #2D4471; }
+  .table > thead > tr {
+    background-color: #97D5D9;
+    color: #EEE8D6; }
+    .table > thead > tr:hover {
+      background-color: #d99b97; }
+    .table > thead > tr > th {
+      border-bottom: 0; }
