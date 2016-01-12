@@ -22,11 +22,11 @@
     padding: 0;
     color: $color-media-head;
     font-size: 2rem;
-    // if this head, is == typography
-    //(typography id and there is a head section above)
     #typography & {
       color: red;
     }
+    // if this head, is == typography
+    //(typography id and there is a head section above)
   }
 
   p{

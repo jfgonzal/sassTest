@@ -3,6 +3,9 @@ var gulp = require('gulp'),
     browserify = require('gulp-browserify'),
     compass = require('gulp-compass'),
     connect = require('gulp-connect'),
+    jshint = require('gulp-jshint'),
+    sass = require('gulp-ruby-sass'),
+    sourcemaps = require('gulp-sourcemaps'),
     concat = require('gulp-concat');
 
 outputDir = 'builds/development/';
@@ -11,12 +14,12 @@ sassSources = ['components/sass/style.scss'];
 
 gulp.task('js', function(){
     gulp.src(jsSources)
-        .pipe(concat('script.js'))
-        .pipe(browserify({insertGlobals : true}))
-        .pipe(gulp.dest(outputDir + 'js'))
+        .pipe(jshint('./.jshintrc'))
+        .pipe(jshint.reporter('jshint-stylish'))
         .pipe(connect.reload())
 });
 
+/*
 gulp.task('compass', function(){
     gulp.src(sassSources)
         .pipe(compass({
@@ -28,10 +31,26 @@ gulp.task('compass', function(){
         .pipe(gulp.dest('builds/development/css'))
         .pipe(connect.reload())
 });
+*/
+
+
+gulp.task('sass', function () {
+    return sass('components/sass/style.scss', {
+        sourcemap: true,
+        style: 'expanded'
+    })
+        .on('error', function (err) {
+            console.error('Error!', err.message);
+        })
+        .pipe(sourcemaps.write())
+        .pipe(gulp.dest('builds/development/css'))
+        .pipe(connect.reload());
+});
+
 
 gulp.task('watch', function(){
-    gulp.watch(jsSources, ['js']);
-    gulp.watch('components/sass/**/*.scss', ['compass']);
+    gulp.watch('builds/development/js/**/*', ['js']);
+    gulp.watch('components/sass/**/*.scss', ['sass']);
     gulp.watch('builds/development/*.html', ['html']);
 });
 
@@ -47,4 +66,4 @@ gulp.task('connect', function(){
     });
 });
 
-gulp.task('default', ['html', 'js','compass', 'connect', 'watch']);
+gulp.task('default', ['html', 'sass', 'connect', 'watch']);

@@ -2,6 +2,7 @@ $color-btn-text: $color-backgrounds;
 $color-btn-default: $davyGray;
 $color-btn-hot: red;
 $color-btn-cool: $darkestBlue;
+$roundness: 20px 0 20px 0;
 
 %btn {
   display: inline-block;
@@ -38,7 +39,7 @@ $color-btn-cool: $darkestBlue;
   }
   img{
     display:block;
-    border-radius:10px;
+    border-radius: nth($roundness,1);
     max-width: 100%;
   }
 }
