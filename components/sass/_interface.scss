@@ -21,14 +21,33 @@ $roundness: 20px 0 20px 0;
 $color-btn-names: 'default', 'hot', 'cool';
 $color-btn-values: $color-btn-default, $color-btn-hot, $color-btn-cool;
 
-@each $name in $color-btn-names{
-  //picks up the index from the name array
-  $i : index($color-btn-names, $name);
-  .btn-#{$name}{
+$color-btns: (
+  default: $color-btn-default,
+  hot: $color-btn-hot,
+  cool: $color-btn-cool,
+  awesome: $purple
+);
+
+// same effect, but with an associative array
+@each $key, $value in  $color-btns{
+  .btn-#{$key}{
     @extend %btn;
-    background-color: nth($color-btn-values, $i);
+    background-color: $value;
   }
 }
+
+
+
+///*@each $name in $color-btn-names{
+//  //picks up the index from the name array
+//  $i : index($color-btn-names, $name);
+//  .btn-#{$name}{
+//    @extend %btn;
+//    background-color: nth($color-btn-values, $i);
+//  }
+//}*/
+
+
 
 .grid {
   @include clearfix;
