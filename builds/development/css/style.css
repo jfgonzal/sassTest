@@ -406,11 +406,11 @@ h1, h2, h3, h4, h5, h6 {
   clear: both; }
 .grid .item {
   float: left;
-  width: 19.2%; }
+  width: 32%; }
   .grid .item:nth-child(n) {
-    margin-right: 1%;
-    margin-bottom: 1%; }
-  .grid .item:nth-child(5n) {
+    margin-right: 2%;
+    margin-bottom: 2%; }
+  .grid .item:nth-child(3n) {
     margin-right: 0;
     margin-bottom: 0; }
 .grid img {

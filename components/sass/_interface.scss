@@ -34,7 +34,7 @@ $color-btn-cool: $darkestBlue;
   @include clearfix;
   .item {
     float: left;
-    @include imagegrid(5, 1%)
+    @include imagegrid(3, 2%)
   }
   img{
     display:block;
