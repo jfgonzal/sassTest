@@ -399,6 +399,25 @@ h1, h2, h3, h4, h5, h6 {
 .btn-hot {
   background: red; }
 
+.gridbefore, .gridafter {
+  content: '';
+  display: table; }
+.grid:after {
+  clear: both; }
+.grid .item {
+  float: left;
+  width: 19.2%; }
+  .grid .item:nth-child(n) {
+    margin-right: 1%;
+    margin-bottom: 1%; }
+  .grid .item:nth-child(5n) {
+    margin-right: 0;
+    margin-bottom: 0; }
+.grid img {
+  display: block;
+  border-radius: 10px;
+  max-width: 100%; }
+
 .background {
   color: #EEE8D6;
   margin: 20px 0;
@@ -438,7 +457,7 @@ h1, h2, h3, h4, h5, h6 {
   padding: 0;
   list-style: none; }
   .media .item {
-    padding-bottom: 20px;
+    padding-bottom: 10px;
     padding-top: 10px;
     padding-left: 10px;
     border-top: 1px dotted #123524; }
@@ -467,3 +486,19 @@ h1, h2, h3, h4, h5, h6 {
   .media a {
     text-decoration: none;
     color: #191970; }
+
+.table {
+  font-size: 1.5rem;
+  text-align: left;
+  width: 100%; }
+  .table caption {
+    font-size: 2.5rem;
+    text-align: left;
+    padding-bottom: 5px; }
+  .table > thead > tr > th,
+  .table > thead > tr > td,
+  .table > tbody > tr > th,
+  .table > tbody > tr > td,
+  .table > tfoot > tr > th,
+  .table > tfoot > tr > td {
+    padding: 10px; }

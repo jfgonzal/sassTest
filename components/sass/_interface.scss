@@ -30,3 +30,15 @@ $color-btn-cool: $darkestBlue;
   @extend %btn;
   background: $color-btn-hot;
 }
+.grid {
+  @include clearfix;
+  .item {
+    float: left;
+    @include imagegrid(5, 1%)
+  }
+  img{
+    display:block;
+    border-radius:10px;
+    max-width: 100%;
+  }
+}
